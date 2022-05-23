@@ -1,13 +1,74 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <title>HTML Layouts</title>
+    <style>
+          body 
+          {
+                background-color:#323232;
+          }
+          nav 
+          {
+                float : left;
+                font-size : 15px;
+                color : #d8d8d8;
+                padding : 10px;
+                margin-left : 15px;
+                margin-right : 50px;
+          }
+          section
+          {
+                float : left;
+                font-size : 10px;
+                color : white;
+                padding : 20px;
+
+          }
+          input.underline
+          {
+            border: none;
+          　border-bottom:1px;
+          }
+    </style>
     <script src="script.js"></script>
     <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+
   </head>
-  <body bgcolor="#323232">
-    <img
-      src="manna_Logo_ENG_Horizontal_White_CMYK_PNG.png"
-      alt="manna logo white"
-    />
+  <body>
+    <header>
+        <img
+        src="https://github.com/Karlmin/milkit_online_collborate_1_manna/blob/Karl/manna_Logo_ENG_Horizontal_White_CMYK_PNG.png?raw=true"
+        alt="manna logo white"
+        width="150"
+        height="50"
+      />
+    </header>
+    <nav>
+        <h2>회원가입</h2>
+        <h2>ID 찾기</h2>
+        <h2>비밀번호 찾기</h2>
+    </nav>
+    <section>
+        <h2>
+            <input class="underline" type="text" value="ID">ID
+            <input type="submit" value="중복확인">
+        <h2>
+          <form>  
+            <input type="password" name="password">PASSWORD
+          </form>
+        </h2>
+        <h2>
+          <form>
+            <input type="text" name="username">NAME
+          </form>
+        </h2>
+        <h2>
+            <input type="tel" name="telnum">NUMBER
+        </h2>
+        <h2>
+        <input type="number" name="erpnum" min="100001" max="121000">EMPLOYEE NUMBER
+        </h2>
+        <h2>JOIN</h2>
+    </section>
   </body>
 </html>
