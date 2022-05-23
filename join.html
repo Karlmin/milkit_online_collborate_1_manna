@@ -26,8 +26,40 @@
           }
           input.underline
           {
-            border: none;
-          　border-bottom:1px;
+            outline:none;
+            background-color:#323232;
+            border-color:white;
+            border-top-width:0;
+            border-left-width:0;
+            border-right-width:0;
+            border-bottom-width:2;
+            font-size : 15px;
+            color : white;
+          }
+          input::placeholder
+          {
+            color: white;
+          }
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button
+          {
+            -webkit-appearance: none;
+          }
+          input.button
+          {
+            width:100px;
+            height:30px;
+            position:relative;
+            top:20px;
+            left:90px;
+            color:#7f7f7f;
+            border-radius:5px;
+          }
+          .menubar:hover
+          {
+            color:#ff6b00;
+            font-size:30px;
+            margin-right:-47.7px;
           }
     </style>
     <script src="script.js"></script>
@@ -44,31 +76,36 @@
       />
     </header>
     <nav>
-        <h2>회원가입</h2>
-        <h2>ID 찾기</h2>
-        <h2>비밀번호 찾기</h2>
+        <h2 class="menubar">회원가입</h2>
+        <h2 class="menubar">ID 찾기</h2>
+        <h2 class="menubar">비밀번호 찾기</h2>
     </nav>
     <section>
-        <h2>
-            <input class="underline" type="text" value="ID">ID
-            <input type="submit" value="중복확인">
-        <h2>
-          <form>  
-            <input type="password" name="password">PASSWORD
-          </form>
-        </h2>
-        <h2>
-          <form>
-            <input type="text" name="username">NAME
-          </form>
-        </h2>
-        <h2>
-            <input type="tel" name="telnum">NUMBER
-        </h2>
-        <h2>
-        <input type="number" name="erpnum" min="100001" max="121000">EMPLOYEE NUMBER
-        </h2>
-        <h2>JOIN</h2>
-    </section>
+        <form action='join_page.php'>
+          <h2>
+              <input class="underline" type="text" placeholder="ID" onfocus="this.placeholder=''" onblur="this.placeholder='ID'">
+              <input type="button" value="중복확인" onclick='alert("중복확인중입니다.")'/>
+          </h2>
+          <h2>
+              <input class="underline" type="password" placeholder="PASSWORD"
+              onfocus="this.placeholder=''"
+              onblur="this.placeholder='PASSWORD'"/>
+          </h2>
+          <h2>
+            <form>
+              <input class="underline" type="text" placeholder="USERNAME" onfocus="this.placeholder=''" onblur="this.placeholder='USERNAME'"/>
+            </form>
+          </h2>
+          <h2>
+              <input class="underline" type="number" placeholder="PHONE NUMBER" onfocus="this.placeholder=''" onblur="this.placeholder='PHONE NUMBER'"/>
+          </h2>
+          <h2>
+              <input class="underline" type="number" placeholder="EMPLOYEE NUMBER" onfocus="this.placeholder=''" onblur="this.placeholder='EMPLOYEE NUMBER'"/>
+          </h2>
+          <h2>
+            <input class="button" type="submit" value="JOIN"/>  
+          </h2>
+        </form>  
+      </section>
   </body>
 </html>
